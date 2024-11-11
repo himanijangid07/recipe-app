@@ -1,9 +1,11 @@
+import {Link, useLocation} from "react-router-dom"
 import { useState } from "react"
 import Sidebar from "./Sidebar"
 import {faHome, faList, faCog} from "@fortawesome/free-solid-svg-icons"
 
 export default function Navbar() {
     const [show, setShow] = useState(false)
+    const location = useLocation(); 
     const links = [
         {
             name: "Home",
@@ -31,7 +33,7 @@ export default function Navbar() {
             <div className="nav-links">
                 {
                     links.map(link => (
-                        <a href="#!" key = {link.name}>{link.name}</a>
+                        <Link to={link.path} className={location.pathname === link.path ? "active" : ""} key={link.name}>{link.name}</Link>
                     ))
                 }
                 {/* <a href="#!">Home</a>
