@@ -26,6 +26,7 @@ body {
     font-size: var(--font-size);
     font-family: Roboto, sans-serif;
     padding-top: 55px;
+    background-color: var(--background-light);
 }
 
 a {
@@ -51,6 +52,9 @@ img {
     flex-wrap: wrap;
     align-items: center;
     margin-bottom: 3vw ;
+    &.d-block {
+        display: block;
+    }
     .title {
         color: var(--text-color);
         font-size: 2.5em;
@@ -407,6 +411,69 @@ img {
         margin-top: .75em;
         display: inline-block;
     }
+}
+
+.options-container {
+    box-shadow: 0 5px 10px var(--shadow-color);
+    padding: 1em;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    border-left: .5em solid var(--primary-color);
+    background-color: var(--background-light);
+    margin-top: 1em;
+    display: flex;
+    gap: 1em;
+    .option {
+        height: 3.5em;
+        width: 3.5em;
+        box-shadow: 0 3px 6px var(--shadow-color);
+        border-radius: 5px;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        -ms-border-radius: 5px;
+        -o-border-radius: 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &.light {
+            background-color: #fff;
+        }
+        &.dark {
+            background-color: rgb(29, 29, 29);
+        }
+        .check {
+            height: 2.5em;
+            width: 2.5em;
+            background-color: var(--primary-color);
+            border-radius: 50%;
+            -webkit-border-radius: 50%;
+            -moz-border-radius: 50%;
+            -ms-border-radius: 50%;
+            -o-border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            line-height: 2.5em;
+            box-shadow: 0 2px 5px var(--shadow-color);
+            svg {
+                height: 1.5em;
+                width: 1.5em;
+            }
+        }
+    }
+    .btn span {
+        display: inline;
+        margin-left: .5em;
+    }
+}
+
+.d-block h2 {
+    font-size: 2em;
+    margin-bottom: .5em;
+    color: var(--text-color);
 }
 
 @media screen and (max-width: 1280px){
